@@ -41,6 +41,11 @@
                                     include_once('./chucnang/sanpham/danhsachsanpham.php');
                                     break;  
                                 }
+                            case 'trademark':
+                                {
+                                    include_once('./chucnang/sanpham/trademark.php');
+                                    break;  
+                                }
                             case 'chitietsanpham':
                                 {
                                     include_once('./chucnang/sanpham/chitietsanpham.php');
@@ -70,7 +75,8 @@
                                     {
                                         include_once('./chucnang/phantrang/phantrang.php');
                                         break;  
-                                    }    
+                                    }  
+                              
                             default: include_once('./chucnang/sanpham/danhsachsanpham.php');
                         }
                     }

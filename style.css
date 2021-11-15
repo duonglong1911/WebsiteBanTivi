@@ -380,14 +380,7 @@ p {
     font-size: 18px;
 }
 
-.btn-logout {
-    border: 1px solid rgba(0, 0, 0, 0.14);
-    border-radius: 10px;
-    padding: 8px 12px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.14);
-    background: white;
-    cursor: pointer;
-}
+
 
 .btn-buy button {
     border: 1px solid rgba(0, 0, 0, 0.14);
@@ -528,6 +521,26 @@ p {
     padding: 8px 0 0 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.14);
 }
+.header__info div {
+    display: flex;
+}
+.header__address i,
+.header__phone i {
+    color: #0098DB;
+    padding: 0 10px;
+}
+.header__des {
+    color: #0098DB;
+    font-weight: 500;
+}
+.header__logo {
+    display: flex;
+}
+.header-search {
+    border: 2px solid #0098DB;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 
 .logo__header {
     padding: 8px 0;
@@ -535,6 +548,39 @@ p {
     justify-content: space-between;
     align-items: center;
 }
+.search__input {
+    border: none;
+    width: 300px;
+    height: 30px;
+}
+.search__button {
+    border: none;
+    color: #0098DB;
+    background-color: #fff;
+    padding: 5px;
+}
+.search__button:hover {
+    color: #0098DB;
+}
+.header__right {
+    display: flex;
+    align-items: center;
+}
+.header__right i {
+    color: #0098DB;
+}
+.header__username {
+    color: #0098DB;
+    margin-right: 15px;
+}
+.btn-logout {
+    border: none;
+    padding: 8px 12px;
+    /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.14); */
+    background: white;
+    cursor: pointer;
+}
+
 .menu__item-child {
     z-index: 10000;
     background-color: white;
@@ -552,6 +598,11 @@ p {
     font-weight: 300;
     font-size: 18px;
     color: black !important;
+    
+}
+.menu__subnav-content {
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu__subnav:hover {
@@ -682,16 +733,22 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 .product__content {
     width: 95%;
     border: 1px solid #999;
     padding: 5px;
-
+    position: relative;
+}
+.product__image {
+    height: 93px;
 }
 .product-item a {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 .product-price {
     color: red;
@@ -706,6 +763,65 @@ p {
 .product-origin,
 .product-trademark {
     font-size: 12px;
+}
+.product__label-new {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 36px;
+    background-color: rgb(0, 152, 210, 0.9);
+    text-align: center;
+    color: #fff;
+}
+.product__label-new::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-width: 0 20px 6px;
+    border-style: solid;
+    border-color: transparent rgb(0, 152, 210, 0.9) transparent rgb(0, 152, 210, 0.9);
+}
+.product__label-hot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 36px;
+    background-color: rgb(243, 207, 0, 0.9);
+    text-align: center;
+    color: #fff;
+}
+
+.product__label-hot::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-width: 0 20px 6px;
+    border-style: solid;
+    border-color: transparent rgb(243, 207, 0, 0.9) transparent rgb(243, 207, 0, 0.9);
+}
+.product__label-sale {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 36px;
+    background-color: rgb(243, 0, 20, 0.9);
+    text-align: center;
+    color: #fff;
+}
+
+.product__label-sale::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    border-width: 0 20px 6px;
+    border-style: solid;
+    border-color: transparent rgb(243, 0, 20, 0.9) transparent rgb(243, 0, 20, 0.9);
 }
 
 .category__types {
@@ -738,3 +854,12 @@ p {
 .category__item-size input {
     margin-right: 3px;
 }
+
+
+#footer {
+    margin-top: 50px;
+}
+
+
+
+

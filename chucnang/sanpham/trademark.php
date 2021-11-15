@@ -1,17 +1,17 @@
 <?php
     $id = $_GET['id'];
-    $nametype = $_GET['nametype'];
-    $sql = "SELECT * FROM sanpham WHERE idtype = '".$id."'";
+    $nametrademark = $_GET['nametrademark'];
+    $sql = "SELECT * FROM sanpham WHERE idtrademark = '".$id."'";
     $result = mysqli_query($connect, $sql);
-    $sql2 = "SELECT * FROM trademark";
+        $sql2 = "SELECT * FROM trademark";
     $result2 = mysqli_query($connect, $sql2);
 ?>
 
-<main class="main__listproduct">
+    <main class="main__listproduct">
         <div class="column-left">
                 <div class="title__main">
                 <span><a class="action__link" href="index.php">Trang chủ</a></span>
-                <h5 class="title__product mt-2 mb-4">Sản phẩm <?php echo $nametype ?></h5>
+                <h5 class="title__product mt-2 mb-4">Trang chủ</h5>
                 <p class="tilte__main-small"></p>
             </div>
             <ul class="list-products">

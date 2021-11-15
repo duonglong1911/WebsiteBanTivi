@@ -1,6 +1,6 @@
 <?php
-    $item = 8;
-    $sql = "SELECT * FROM sanpham LIMIT 8";
+    $item = 12;
+    $sql = "SELECT * FROM sanpham LIMIT 12";
     $result = mysqli_query($connect, $sql);
     $sql1 = "SELECT * FROM sanpham ";
     $result1 = mysqli_query($connect, $sql1);
@@ -26,14 +26,47 @@
                 ?>
                 <li class="product-item col-3 mb-2">
                     <div class="product__content">
-                        <a href="index.php?page_layout=chitietsanpham&id=<?php echo $row['idsp']?>"><img src="image/<?php echo $row['img']?>" alt="photo" class="product-img"></a>
-                        <div class="product-info">
-                            <p class="mb-1 box__product-name"><a class="txt__post-link product-name" href="index.php?page_layout=chitietsanpham&id=<?php echo $row['idsp']?>"><?php echo $row['namesp']?></a></p>
-                            <p class="mb-1 product-color">Màu: <?php echo $row['color']?></p>
-                            <p class="mb-1"><span class="product-price"><?php echo $row['price']?><small>đ</small></span></p>
-                            <p class="mb-1 product-origin"> Xuất xử: <?php echo $row['origin']?></p>
-                            <p class="mb-1 product-trademark"> Hãng: <?php echo $row['trademark']?></p>
-                        </div>
+                        <a href="index.php?page_layout=chitietsanpham&id=<?php echo $row['idsp']?>">
+                            <div class="product__image">
+                                <img src="image/<?php echo $row['img']?>" alt="photo" class="product-img">
+                            </div>
+                            <div class="product-info">
+                                
+                                <p class="mb-1 mt-1 box__product-name"><?php echo $row['namesp']?></p>
+                                <p class="mb-1 product-color">Màu: <?php echo $row['color']?></p>
+                                <p class="mb-1"><span class="product-price"><?php echo $row['price']?><small>đ</small></span></p>
+                                <p class="mb-1 product-origin"> Xuất xử: <?php echo $row['origin']?></p>
+                                <p class="mb-1 product-trademark"> Hãng: <?php echo $row['trademark']?></p>
+                            </div>
+
+                            <?php 
+                                if($row['idtype'] == "new") {
+                                ?>
+                                <div class="product__label-new">
+                                        <span>New</span>
+                                </div>
+                            <?php } ?>
+
+                            <?php 
+                                if($row['idtype'] == "hot") {
+                                ?>
+                                <div class="product__label-hot">
+                                        <span>Hot</span>
+                                </div>
+                            <?php } ?>
+
+                            <?php 
+                                if($row['idtype'] == "sale") {
+                                ?>
+                                <div class="product__label-sale">
+                                        <span>Sale</span>
+                                </div>
+                            <?php } ?>
+
+                            
+                            
+                            
+                    </a>
                     </div>
                 </li>
                 <?php }?>
@@ -50,7 +83,7 @@
                             while($row = mysqli_fetch_array($result2)){
                             ?>
                             <li class="category__item">
-                                <a href="index.php?page_layout=danhmuc&id=<?php echo $row['idtrademark']?>&nametrademark=<?php echo $row['nametrademark']?>" class="category__item-link"><?php echo $row['nametrademark']?></a>
+                                <a href="index.php?page_layout=trademark&id=<?php echo $row['idtrademark']?>&nametrademark=<?php echo $row['nametrademark']?>" class="category__item-link"><?php echo $row['nametrademark']?></a>
                             </li>
                             <?php } ?>
                         </ul>
