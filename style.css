@@ -507,6 +507,7 @@ p {
 .pagination {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .pagination a {
@@ -741,6 +742,77 @@ p {
     padding: 5px;
     position: relative;
 }
+
+.product__blur {
+    position: absolute;
+    top:0;
+    z-index: 998;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: 1s fadeIn;
+    animation-fill-mode: forwards;
+    visibility: hidden;  
+}
+
+.product__content:hover .product__blur {
+    background-color: rgb(221, 221, 221);
+}
+
+
+.product__option {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* animation-fill-mode: forwards; */
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999;
+}
+.product__content:hover .product__option {
+    animation: 0.6s normal forwards showOption ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 30%;
+    }
+}
+
+@keyframes showOption {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+        right:20px;
+        bottom:0px;
+    }
+}
+.product__option-item {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #0098DB;
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product__option-item:hover {
+    background-color: #0098DB !important;
+    color: #fff;
+}
+
+
 .product__image {
     height: 93px;
 }
@@ -860,6 +932,60 @@ p {
     margin-top: 50px;
 }
 
+
+
+/*=======DETAIL PRODUCT============  */
+.detail-image img {
+    width: 100%;
+}
+
+.detail__product {}
+
+.detail__product-name {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.detail__product-price {}
+.detail__product-price span {
+    font-size: 30px;
+    color: red;
+}
+
+.detail__product-info {
+    border: 1px solid rgb(195, 195, 195);
+    padding: 10px;
+}
+.detail__product-info span {
+    font-weight: 600;
+}
+
+.detail__product-button {
+    display: flex;
+}
+
+.detail__product-btn {
+    border: 1px solid #0098DB;
+}
+.detail__product-btn a {
+    padding: 15px 30px;
+    line-height: 50px;
+}
+
+.detail__product-addbtn {
+    margin-right: 20px;
+}
+
+.detail__product-buybtn {
+    background-color: #0098DB;
+}
+.detail__product-buybtn a {
+    color: #fff;
+}
+
+.detail__product-btn.detail__product-addbtn {}
+
+.detail__product-btn.detail__product-buybtn {}
 
 
 

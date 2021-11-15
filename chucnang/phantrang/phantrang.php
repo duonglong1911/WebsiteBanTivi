@@ -63,7 +63,20 @@
                                 </div>
                             <?php } ?>
 
-                            
+                        <div class="product__blur">
+                        </div>
+                        <div class="product__option">
+                            <a href="index.php?page_layout=chitietsanpham&id=<?php echo $row['idsp']?>">
+                                <div class="product__option-item product__option-detail">
+                                    <i class="far fa-eye"></i>
+                                </div>
+                            </a>
+                            <a href="./chucnang/giohang/themhang.php?id_sp=<?php echo $row['idsp']?>&dongia=<?php  echo $row['price']?>">
+                                <div class="product__option-item product__option-buy">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </a>
+                        </div>
                             
                             
                     </a>
@@ -72,6 +85,13 @@
                 <?php }?>
             </ul>
             <br>
+            <div class="pagination">
+                <?php
+                    for($i = 1; $i <= $totalPage; $i++){
+                ?>
+                    <a href="index.php?page_layout=phantrang&page=<?php echo $i?>"><?php echo $i?></a>
+                <?php }?>
+            </div>
         </div>
         <div class="column-right">
             <div class="category">
@@ -166,10 +186,4 @@
                 </div>
         </div>
     </main>
-    <div class="pagination">
-        <?php
-            for($i = 1; $i <= $totalPage; $i++){
-        ?>
-            <a href="index.php?page_layout=phantrang&page=<?php echo $i?>"><?php echo $i?></a>
-        <?php }?>
-    </div>
+    

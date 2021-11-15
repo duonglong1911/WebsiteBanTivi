@@ -56,9 +56,6 @@
                             <a href="index.php" class="menu__item-link">Trang chủ</a>
                         </li>
                         <li class="menu__item">
-                            <a href="index.php?page_layout=lienhe" class="menu__item-link">Liên hệ</a>
-                        </li>
-                        <li class="menu__item">
                             <a href="#" class="menu__item-link">Danh mục <i class="fas fa-chevron-down"></i></a>
                             <ul class="menu__item-child">
                                 <li class="menu__subnav">
@@ -89,12 +86,13 @@
                                         <?php } ?>
                                     </ul>
                                 </li>
-
-                                
                             </ul>
                         </li>
                         <li class="menu__item">
                             <a href="index.php?page_layout=giohang" class="menu__item-link">Giỏ hàng</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="index.php?page_layout=lienhe" class="menu__item-link">Liên hệ</a>
                         </li>
                     </ul>
                     
